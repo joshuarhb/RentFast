@@ -29,6 +29,9 @@ public class Vehicle {
     private VehicleStatus status;
     private String location;
     private Double rating;
+    @OneToOne
+    @JoinColumn(name = "vehicle_details_id")
+    private VehicleDetails vehicleDetails;
 
     @OneToMany(mappedBy = "vehicle")
     private List<VehicleDocument> documents;

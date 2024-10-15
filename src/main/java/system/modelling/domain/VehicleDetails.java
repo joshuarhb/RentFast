@@ -20,4 +20,7 @@ public class VehicleDetails {
     @Enumerated(EnumType.STRING)
     private FuelType fuelType;
 
+    @OneToOne(mappedBy = "vehicleDetails")
+    private Vehicle vehicle;
+
 }
